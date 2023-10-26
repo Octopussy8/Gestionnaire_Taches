@@ -18,7 +18,7 @@ def supprimerTache(tache):
 
 def marquerTacheTerminee(tache):
     # Demander à l'utilisateur de saisir l'ID de la tâche
-    id_tache = input("Entrez l'ID de la tâche à marquer comme terminée : ")
+    id_tache = int(input("Entrez l'ID de la tâche à marquer comme terminée : "))
 
     # Vérifier si la tâche existe
     if id_tache not in range(len(tache)):
@@ -27,6 +27,7 @@ def marquerTacheTerminee(tache):
 
     # Marquer la tâche comme terminée
     tache[id_tache] = f"{tache[id_tache]} (terminée)"
+    print("Opération réussie")
 
     return tache
 
